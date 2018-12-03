@@ -279,8 +279,8 @@ function part1(input) {
         threeLetterFound = false;
     }
 
-    console.log('two letters', twoLetters);
-    console.log('three letters', threeLetters);
+    // console.log('two letters', twoLetters);
+    // console.log('three letters', threeLetters);
 
     return twoLetters * threeLetters;
 }
@@ -288,7 +288,7 @@ function part1(input) {
 
 function part2(input) {
     input.sort();
-    console.log(input);
+    // console.log(input);
     for (var i = 0; i < input.length; i++) {
         var word1 = input[i];
         // console.log(word1);
@@ -305,14 +305,31 @@ function part2(input) {
             }
             if (diff === 1) {
                 return word1 + ' ' + word2;
+                // console.log(word1 + '' + word2);
             }
         }
     }
 }
 
 
+// var start1 = new Date().getTime();
+// console.log('part1: ', part1(inputArr));
+// var end1 = new Date().getTime();
+// var start2 = new Date().getTime();
+// console.log('part2: ', part2(inputArr));
+// var end2 = new Date().getTime();
 
+console.time('part1');
 console.log('part1: ', part1(inputArr));
+console.timeEnd('part1');
+console.time('part2');
 console.log('part2: ', part2(inputArr));
+console.timeEnd('part2');
+
+// const time1 = end1 - start1;
+// const time2 = end2 - start2;
+
+// console.log('part1 time: ', time1);
+// console.log('part2 time: ', time2);
 
 
